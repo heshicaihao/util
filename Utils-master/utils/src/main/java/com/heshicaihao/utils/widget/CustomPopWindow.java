@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
 
-import androidx.annotation.RequiresApi;
 
 public class CustomPopWindow {
     private Context mContext;
@@ -62,10 +61,11 @@ public class CustomPopWindow {
         return this;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public CustomPopWindow showAsDropDown(View anchor, int xOff, int yOff, int gravity){
         if(mPopupWindow!=null){
-            mPopupWindow.showAsDropDown(anchor,xOff,yOff,gravity);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                mPopupWindow.showAsDropDown(anchor,xOff,yOff,gravity);
+            }
         }
         return this;
     }

@@ -26,7 +26,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //RSAUtil 加密包 (RSA加密)
     implementation 'org.bouncycastle:bcprov-jdk16:1.46'
-//    implementation 'com.heshicaihao:rsa:0.0.0'
+
 
 }
 
@@ -39,7 +39,7 @@ ext {
     GITHUB_REPO_PATH = "E:/Note/maven.git/trunk"
     PUBLISH_GROUP_ID = 'com.heshicaihao'
     PUBLISH_ARTIFACT_ID = 'utils'
-    PUBLISH_VERSION = '0.0.4'
+    PUBLISH_VERSION = '0.0.6'
 }
 uploadArchives {
     repositories.mavenDeployer {

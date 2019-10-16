@@ -5,6 +5,7 @@ package com.heshicaihao.utils;
  */
 
 
+import android.content.Context;
 import android.text.TextUtils;
 import android.util.Base64;
 
@@ -46,23 +47,23 @@ public class RSAUtil {
      * @return 加密后的内容
      */
 
-    public static String encrypt(String data) {
+    public static String encrypt(Context conntext, String data) {
         try {
-            loadPublicKey(publicKey);
+            loadPublicKey(conntext,publicKey);
 
             if (TextUtils.isEmpty(data)) {
 
-                throw new Exception("加密内容不能为空");
+                throw new Exception(conntext.getString(R.string.rsa_tips_01));
 
             }
 
             if (TextUtils.isEmpty(publicKey)) {
 
-                throw new Exception("公钥不能为空");
+                throw new Exception(conntext.getString(R.string.rsa_tips_02));
 
             }
 
-            byte[] dd = encrypt(loadPublicKey(publicKey), data.getBytes());
+            byte[] dd = encrypt(conntext,loadPublicKey(conntext,publicKey), data.getBytes());
 
             return Base64.encodeToString(dd,0);
 //            return base64.encodeToString(dd);
@@ -80,7 +81,7 @@ public class RSAUtil {
      * @param publicKeyStr 公钥数据字符串
      */
 
-    private static RSAPublicKey loadPublicKey(String publicKeyStr) throws Exception {
+    private static RSAPublicKey loadPublicKey(Context conntext,String publicKeyStr) throws Exception {
 
         try {
 
@@ -91,26 +92,15 @@ public class RSAUtil {
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 
             X509EncodedKeySpec keySpec = new X509EncodedKeySpec(buffer);
-
             return (RSAPublicKey) keyFactory.generatePublic(keySpec);
-
         } catch (NoSuchAlgorithmException e) {
-
-            throw new Exception("无此算法");
-
+            throw new Exception(conntext.getString(R.string.rsa_tips_03));
         } catch (InvalidKeySpecException e) {
-
-            throw new Exception("公钥非法");
-
+            throw new Exception(conntext.getString(R.string.rsa_tips_04));
         }
-//        catch (IOException e) {
-//
-//            throw new Exception("公钥数据内容读取错误");
-//
-//        }
         catch (NullPointerException e) {
 
-            throw new Exception("公钥数据为空");
+            throw new Exception(conntext.getString(R.string.rsa_tips_05));
 
         }
 
@@ -125,42 +115,26 @@ public class RSAUtil {
      * @return
      */
 
-    private static byte[] encrypt(RSAPublicKey publicKey, byte[] plainTextData) throws Exception {
+    private static byte[] encrypt(Context conntext,RSAPublicKey publicKey, byte[] plainTextData) throws Exception {
 
         if (publicKey == null) {
-
-            throw new Exception("加密公钥为空, 请设置");
-
+            throw new Exception(conntext.getString(R.string.rsa_tips_06));
         }
-
         Cipher cipher;
-
         try {
-//            cipher = Cipher.getInstance("RSA", new BouncyCastleProvider());
             cipher = Cipher.getInstance("RSA/NONE/OAEPWithSHA1AndMGF1Padding", new BouncyCastleProvider());
             cipher.init(Cipher.ENCRYPT_MODE, publicKey);
-
             return cipher.doFinal(plainTextData);
-
         } catch (NoSuchAlgorithmException e) {
-
-            throw new Exception("无此加密算法");
-
+            throw new Exception(conntext.getString(R.string.rsa_tips_07));
         } catch (NoSuchPaddingException e) {
-
             e.printStackTrace();
-
         } catch (InvalidKeyException e) {
-
-            throw new Exception("加密公钥非法,请检查");
-
+            throw new Exception(conntext.getString(R.string.rsa_tips_08));
         } catch (IllegalBlockSizeException e) {
-
-            throw new Exception("明文长度非法");
-
+            throw new Exception(conntext.getString(R.string.rsa_tips_09));
         } catch (BadPaddingException e) {
-
-            throw new Exception("明文数据已损坏");
+            throw new Exception(conntext.getString(R.string.rsa_tips_10));
 
         }
 

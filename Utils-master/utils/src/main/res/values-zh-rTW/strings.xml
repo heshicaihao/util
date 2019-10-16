@@ -1,0 +1,12 @@
+<resources>
+    <string name="rsa_tips_01">加密內容不能爲空</string>
+    <string name="rsa_tips_02">公鑰不能爲空</string>
+    <string name="rsa_tips_03">無此算法</string>
+    <string name="rsa_tips_04">公鑰非法</string>
+    <string name="rsa_tips_05">公鑰數據爲空</string>
+    <string name="rsa_tips_06">加密公鑰爲空, 請設置</string>
+    <string name="rsa_tips_07">無此加密算法</string>
+    <string name="rsa_tips_08">加密公鑰非法,請檢查</string>
+    <string name="rsa_tips_09">明文長度非法</string>
+    <string name="rsa_tips_10">明文數據已損壞</string>
+</resources>

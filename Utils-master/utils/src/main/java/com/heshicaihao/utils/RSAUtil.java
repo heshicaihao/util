@@ -53,13 +53,13 @@ public class RSAUtil {
 
             if (TextUtils.isEmpty(data)) {
 
-                throw new Exception(conntext.getString(R.string.rsa_tips_01));
+                throw new Exception(conntext.getString(R.string.hsc_utils_rsa_tips_01));
 
             }
 
             if (TextUtils.isEmpty(publicKey)) {
 
-                throw new Exception(conntext.getString(R.string.rsa_tips_02));
+                throw new Exception(conntext.getString(R.string.hsc_utils_rsa_tips_02));
 
             }
 
@@ -94,13 +94,13 @@ public class RSAUtil {
             X509EncodedKeySpec keySpec = new X509EncodedKeySpec(buffer);
             return (RSAPublicKey) keyFactory.generatePublic(keySpec);
         } catch (NoSuchAlgorithmException e) {
-            throw new Exception(conntext.getString(R.string.rsa_tips_03));
+            throw new Exception(conntext.getString(R.string.hsc_utils_rsa_tips_03));
         } catch (InvalidKeySpecException e) {
-            throw new Exception(conntext.getString(R.string.rsa_tips_04));
+            throw new Exception(conntext.getString(R.string.hsc_utils_rsa_tips_04));
         }
         catch (NullPointerException e) {
 
-            throw new Exception(conntext.getString(R.string.rsa_tips_05));
+            throw new Exception(conntext.getString(R.string.hsc_utils_rsa_tips_05));
 
         }
 
@@ -118,7 +118,7 @@ public class RSAUtil {
     private static byte[] encrypt(Context conntext,RSAPublicKey publicKey, byte[] plainTextData) throws Exception {
 
         if (publicKey == null) {
-            throw new Exception(conntext.getString(R.string.rsa_tips_06));
+            throw new Exception(conntext.getString(R.string.hsc_utils_rsa_tips_06));
         }
         Cipher cipher;
         try {
@@ -126,15 +126,15 @@ public class RSAUtil {
             cipher.init(Cipher.ENCRYPT_MODE, publicKey);
             return cipher.doFinal(plainTextData);
         } catch (NoSuchAlgorithmException e) {
-            throw new Exception(conntext.getString(R.string.rsa_tips_07));
+            throw new Exception(conntext.getString(R.string.hsc_utils_rsa_tips_07));
         } catch (NoSuchPaddingException e) {
             e.printStackTrace();
         } catch (InvalidKeyException e) {
-            throw new Exception(conntext.getString(R.string.rsa_tips_08));
+            throw new Exception(conntext.getString(R.string.hsc_utils_rsa_tips_08));
         } catch (IllegalBlockSizeException e) {
-            throw new Exception(conntext.getString(R.string.rsa_tips_09));
+            throw new Exception(conntext.getString(R.string.hsc_utils_rsa_tips_09));
         } catch (BadPaddingException e) {
-            throw new Exception(conntext.getString(R.string.rsa_tips_10));
+            throw new Exception(conntext.getString(R.string.hsc_utils_rsa_tips_10));
 
         }
 

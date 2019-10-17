@@ -1,12 +1,12 @@
 <resources>
-    <string name="rsa_tips_01">加密内容不能为空</string>
-    <string name="rsa_tips_02">公钥不能为空</string>
-    <string name="rsa_tips_03">无此算法</string>
-    <string name="rsa_tips_04">公钥非法</string>
-    <string name="rsa_tips_05">公钥数据为空</string>
-    <string name="rsa_tips_06">加密公钥为空, 请设置</string>
-    <string name="rsa_tips_07">无此加密算法</string>
-    <string name="rsa_tips_08">加密公钥非法,请检查</string>
-    <string name="rsa_tips_09">明文长度非法</string>
-    <string name="rsa_tips_10">明文数据已损坏</string>
+    <string name="hsc_utils_rsa_tips_01">加密内容不能为空</string>
+    <string name="hsc_utils_rsa_tips_02">公钥不能为空</string>
+    <string name="hsc_utils_rsa_tips_03">无此算法</string>
+    <string name="hsc_utils_rsa_tips_04">公钥非法</string>
+    <string name="hsc_utils_rsa_tips_05">公钥数据为空</string>
+    <string name="hsc_utils_rsa_tips_06">加密公钥为空, 请设置</string>
+    <string name="hsc_utils_rsa_tips_07">无此加密算法</string>
+    <string name="hsc_utils_rsa_tips_08">加密公钥非法,请检查</string>
+    <string name="hsc_utils_rsa_tips_09">明文长度非法</string>
+    <string name="hsc_utils_rsa_tips_10">明文数据已损坏</string>
 </resources>

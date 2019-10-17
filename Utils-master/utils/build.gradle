@@ -39,7 +39,7 @@ ext {
     GITHUB_REPO_PATH = "E:/Note/maven.git/trunk"
     PUBLISH_GROUP_ID = 'com.heshicaihao'
     PUBLISH_ARTIFACT_ID = 'utils'
-    PUBLISH_VERSION = '0.0.7'
+    PUBLISH_VERSION = '0.0.8'
 }
 uploadArchives {
     repositories.mavenDeployer {

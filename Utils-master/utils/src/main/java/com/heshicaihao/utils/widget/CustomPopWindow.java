@@ -2,6 +2,7 @@ package com.heshicaihao.utils.widget;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.view.LayoutInflater;
@@ -56,9 +57,19 @@ public class CustomPopWindow {
 
     public CustomPopWindow showAsDropDown(View anchor){
         if(mPopupWindow!=null){
+            if(Build.VERSION.SDK_INT >= 24){
+                Rect visibleFrame = new Rect();
+                anchor.getGlobalVisibleRect(visibleFrame);
+                int height = anchor.getResources().getDisplayMetrics().heightPixels - visibleFrame.bottom;
+                setHeight(height);
+            }
             mPopupWindow.showAsDropDown(anchor);
         }
         return this;
+    }
+
+    private void setHeight(int height) {
+
     }
 
     public CustomPopWindow showAsDropDown(View anchor, int xOff, int yOff, int gravity){

@@ -1,3 +1,2 @@
-include ':sample', ':utils', ':multilingual', ':other_multilingual' 
-
+include ':sample', ':utils'
 

@@ -7,3 +7,7 @@
 /Utils-master/utils/utils.iml
 /Utils-master/utils/build
 
+/Utils-master/other_multilingual/build
+/Utils-master/other_multilingual/*.iml
+/Utils-master/multilingual/build
+/Utils-master/multilingual/multilingual.iml

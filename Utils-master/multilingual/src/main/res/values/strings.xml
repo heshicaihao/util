@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources >
     <string name="srl_component_falsify" >%s 虚假区域\n代表运行时拖动的高度【%.1fdp】 \n而不会显示任何东西</string>
     <string name="srl_content_empty">SmartRefreshLayout中没有找到内容视图。您是否忘记在xml布局文件中添加？</string>
     <string name="srl_footer_failed">加载失败</string>
@@ -1073,5 +1073,17 @@
     <string name="new_phone_price">新机价格</string>
     <string name="payable_price">应付价格</string>
     <string name="good_products_order_closure">良品订单关闭</string>
+
+    <string name="materiel_is_urgent">物料是否紧急</string>
+    <string name="application_record">申请记录</string>
+    <string name="non_good">不良品</string>
+    <string name="please_select_material_quantity">请先添加数量</string>
+    <string name="rejection_of_goods_tips">请联系直属仓库管理员告知相关情况，如已收到物料包裹请及时退回。物料额度待仓管确认入库后恢复。</string>
+    <string name="refuse_received">拒绝收货</string>
+    <string name="refuse_received_successful">拒绝收货成功</string>
+    <string name="material_return_applied_successfully">申请退料成功</string>
+    <string name="choice_parts">选择配件</string>
+    <string name="associated">已关联</string>
+    <string name="associated_parts">关联配件</string>
 
 </resources>

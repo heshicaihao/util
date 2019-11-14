@@ -1,4 +1,4 @@
-<resources>
+<resources >
     <string name="srl_component_falsify" >%s 虛假區域\n代表運行時拖動的高度【%.1fdp】 \n而不會顯示任何東西</string>
     <string name="srl_content_empty">SmartRefreshLayout中沒有找到內容視圖。您是否忘記在xml布局文件中添加？</string>
     <string name="srl_footer_failed">加載失敗</string>
@@ -1073,5 +1073,17 @@
     <string name="new_phone_price">新機價格</string>
     <string name="payable_price">應付價格</string>
     <string name="good_products_order_closure">良品訂單關閉</string>
+
+    <string name="materiel_is_urgent">物料是否緊急</string>
+    <string name="application_record">申請記錄</string>
+    <string name="non_good">不良品</string>
+    <string name="please_select_material_quantity">請先添加數量</string>
+    <string name="rejection_of_goods_tips">請聯繫直屬倉庫管理員告知相關情況，如已收到物料包裹請及時退回。物料額度待倉管確認入庫後恢復。</string>
+    <string name="refuse_received">拒絕收貨</string>
+    <string name="refuse_received_successful">拒絕收貨成功</string>
+    <string name="material_return_applied_successfully">申請退料成功</string>
+    <string name="choice_parts">選擇配件</string>
+    <string name="associated">已關聯</string>
+    <string name="associated_parts">關聯配件</string>
 
 </resources>
